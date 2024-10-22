@@ -1,6 +1,6 @@
 import express from "express";
 import multer from "multer";
-import { loginUser, registerUser, logoutUser, updateUserProfile, getUserProfile } from "../controller/user.controller.js";
+import { loginUser, registerUser, logoutUser, updateUserProfile, getUserProfile, testingAPI } from "../controller/user.controller.js";
 import { protect } from "../middleware/authMiddleware.js";
 
 const authRouter = express.Router();
@@ -23,5 +23,6 @@ authRouter.post('/registerUser', registerUser);
 authRouter.post('/logoutUser', logoutUser);
 authRouter.put('/profile', protect, upload.single('profilePic'), updateUserProfile); // Handle single file upload
 authRouter.get('/getprofile', protect, getUserProfile);
+authRouter.get('/testingApi', testingAPI);
 
 export default authRouter;

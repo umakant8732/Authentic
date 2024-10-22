@@ -31,8 +31,7 @@ export const usersApislice = apiSlice.injectEndpoints({
             query: (data) => ({
                 url: `${USER_URL}profile`,
                 method: "PUT",
-                body: data,
-               
+                body: data,  
             })
         })
 

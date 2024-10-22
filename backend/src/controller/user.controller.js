@@ -119,3 +119,12 @@ export const updateUserProfile = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 }
+
+export const testingAPI = async (req, res) => {
+    return res.status(200).json(
+        {
+            name : "umakant",
+            message : "congratulation we have successfully deployed our backend"
+        }
+    )
+}
